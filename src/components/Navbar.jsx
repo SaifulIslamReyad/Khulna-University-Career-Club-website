@@ -9,7 +9,7 @@
             <img
               src="src/assets/images/logo.jpg"
               alt="KU Career Club Logo"
-              className="me-2" 
+              className="me-2"
               style={{ width: "50px" }} 
             />
             <div>
