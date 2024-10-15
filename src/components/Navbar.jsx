@@ -1,5 +1,6 @@
   import React from "react";
   import "bootstrap/dist/css/bootstrap.min.css";
+  import "./navbar.css";
 
   const Navbar = () => {
     return (
@@ -9,8 +10,7 @@
             <img
               src="src/assets/images/logo.jpg"
               alt="KU Career Club Logo"
-              className="me-2"
-              style={{ width: "50px" }} 
+              className="me-2" 
             />
             <div>
               <div className="h5 mb-0">Khulna University Career Club</div>

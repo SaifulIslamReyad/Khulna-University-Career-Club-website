@@ -1,0 +1,40 @@
+.navbar {
+    background-color: #fff;
+}
+
+.navbar-brand img {
+    width: 50px;
+}
+
+@media (max-width: 425px) {
+    .navbar-brand img {
+        width: 40px;
+    }
+
+    .navbar-brand .h5 {
+        font-size: 0.9rem;
+        margin-bottom: 0;
+    }
+
+    .navbar-brand .text-muted {
+        font-size: 0.7rem;
+    }
+
+    .navbar-toggler {
+        padding: 0.2rem 0.3rem;   
+    }
+
+    .navbar-toggler-icon {
+        width: 20px;
+        height: 20px;
+    }
+
+    .nav-link {
+        font-size: 0.8rem;
+    }
+
+    .btn {
+        font-size: 0.7rem;
+        padding: 0.2rem 0.4rem;
+    }
+}
