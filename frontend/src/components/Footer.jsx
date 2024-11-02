@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "@fortawesome/fontawesome-free/css/all.min.css";
@@ -33,7 +34,10 @@ const Footer = () => {
                   rel="noopener noreferrer"
                   className="mx-3"
                 >
-                  <i style={{ color: "#4267B2" }} className="fab fa-facebook fa-2x"></i>
+                  <i
+                    style={{ color: "#4267B2" }}
+                    className="fab fa-facebook fa-2x"
+                  ></i>
                 </a>
                 <a
                   href="https://www.linkedin.com/company/kuccofficial/?originalSubdomain=bd"
@@ -41,7 +45,10 @@ const Footer = () => {
                   rel="noopener noreferrer"
                   className="mx-3"
                 >
-                  <i style={{ color: "#0077B5" }} className="fab fa-linkedin fa-2x"></i>
+                  <i
+                    style={{ color: "#0077B5" }}
+                    className="fab fa-linkedin fa-2x"
+                  ></i>
                 </a>
                 <a
                   href="#"
@@ -49,7 +56,10 @@ const Footer = () => {
                   rel="noopener noreferrer"
                   className="mx-3"
                 >
-                  <i style={{ color: "#0084FF" }} className="fab fa-facebook-messenger fa-2x"></i>
+                  <i
+                    style={{ color: "#0084FF" }}
+                    className="fab fa-facebook-messenger fa-2x"
+                  ></i>
                 </a>
               </div>
               <p className="mb-3 text-start">
@@ -60,7 +70,10 @@ const Footer = () => {
               </p>
               <p className="mb-3 text-start">
                 <a href="mailto:riyadsaif@gmail.com">
-                  <i style={{ color: "#D14836" }} className="fas fa-envelope fa-lg me-2"></i>
+                  <i
+                    style={{ color: "#D14836" }}
+                    className="fas fa-envelope fa-lg me-2"
+                  ></i>
                 </a>
                 riyadsaif@gmail.com
               </p>
@@ -70,7 +83,10 @@ const Footer = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <i style={{ color: "red" }} className="fas fa-map-marker-alt fa-lg me-2"></i>
+                  <i
+                    style={{ color: "red" }}
+                    className="fas fa-map-marker-alt fa-lg me-2"
+                  ></i>
                 </a>
                 Cafeteria, Khulna University
               </p>
@@ -80,7 +96,10 @@ const Footer = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <i style={{ color: "#25D366" }} className="fab fa-whatsapp fa-lg me-2"></i>
+                  <i
+                    style={{ color: "#25D366" }}
+                    className="fab fa-whatsapp fa-lg me-2"
+                  ></i>
                 </a>
                 WhatsApp
               </p>
