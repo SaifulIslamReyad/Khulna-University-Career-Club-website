@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -7,7 +8,7 @@ const Navbar = () => {
     <nav className="bg-white shadow-lg">
       <div className="mx-auto flex flex-wrap items-center justify-between p-3">
         {/* Logo Section */}
-        <a className="flex items-center" href="/">
+        <Link className="flex items-center" to="/">
           <img
             src="src/assets/images/logo.jpg"
             alt="KU Career Club Logo"
@@ -19,7 +20,7 @@ const Navbar = () => {
             </div>
             <small className="text-gray-500">Unveil Your Prospects</small>
           </div>
-        </a>
+        </Link>
 
         {/* Mobile Menu Toggle Button */}
         <button
@@ -52,74 +53,56 @@ const Navbar = () => {
         >
           <ul className="flex flex-col lg:flex-row lg:ml-auto space-y-2 lg:space-y-0 lg:space-x-4 items-center">
             <li>
-              <a
-                className="text-gray-700 hover:text-blue-500"
-                href="index.html"
-              >
+              <Link className="text-gray-700 hover:text-blue-500" to="/">
                 Home
-              </a>
+              </Link>
             </li>
             <li>
-              <a
-                className="text-gray-700 hover:text-blue-500"
-                href="about.html"
-              >
+              <Link className="text-gray-700 hover:text-blue-500" to="/about">
                 About
-              </a>
+              </Link>
             </li>
             <li>
-              <a
-                className="text-gray-700 hover:text-blue-500"
-                href="events.html"
-              >
+              <Link className="text-gray-700 hover:text-blue-500" to="/event">
                 Events
-              </a>
+              </Link>
             </li>
             <li>
-              <a
-                className="text-gray-700 hover:text-blue-500"
-                href="gallery.html"
-              >
+              <Link className="text-gray-700 hover:text-blue-500" to="gallery">
                 Gallery
-              </a>
+              </Link>
             </li>
             <li>
-              <a
-                className="text-gray-700 hover:text-blue-500"
-                href="segments.html"
-              >
+              <Link className="text-gray-700 hover:text-blue-500" to="/members">
                 Members
-              </a>
+              </Link>
             </li>
             <li>
-              <a className="text-gray-700 hover:text-blue-500" href="blog.html">
+              <Link className="text-gray-700 hover:text-blue-500" to="/blog">
                 Blog
-              </a>
+              </Link>
             </li>
             <li>
-              <a
-                className="text-gray-700 hover:text-blue-500"
-                href="contact.html"
-              >
+              <Link className="text-gray-700 hover:text-blue-500" to="/qna">
                 Contact and FAQ
-              </a>
+              </Link>
             </li>
           </ul>
 
           {/* Action Buttons */}
           <div className="flex items-center justify-center space-x-2 lg:mt-0 lg:flex-row flex-col">
-            <a
-              href="join.html"
+            <Link
+              to="/signup"
               className="bg-[#105369] text-white px-4 py-2 rounded hover:bg-blue-700 transition"
             >
               Join Us
-            </a>
-            <a
-              href="login.html"
+            </Link>
+            <Link
+              to="/login"
               className="bg-[#105369] text-white px-4 py-2 rounded hover:bg-blue-700 transition"
             >
               Log In
-            </a>
+            </Link>
           </div>
         </div>
       </div>

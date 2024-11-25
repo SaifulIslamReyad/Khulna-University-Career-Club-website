@@ -5,7 +5,7 @@ import "@fortawesome/fontawesome-free/css/all.min.css";
 
 const Footer = () => {
   return (
-    <footer className="bg-light py-4">
+    <footer className="bg-light py-4 shadow-lg">
       <div className="container">
         <div className="row text-center text-lg-start">
           {/* About KUCC Section */}
