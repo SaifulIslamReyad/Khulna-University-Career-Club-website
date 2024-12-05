@@ -1,0 +1,13 @@
+/* src/index.css or src/App.css */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+main {
+  padding: 2rem;
+}
+
+h1 {
+  color: #333;
+}
