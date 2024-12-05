@@ -1,9 +1,27 @@
+import { setAuthUser } from "@/redux/authSlice";
+import axios from "axios";
 import { useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
+import { toast } from "sonner";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
-
+  const { user } = useSelector((store) => store.auth);
+  const dispatch = useDispatch();
+  const logoutHandler = async () => {
+    try {
+      const res = await axios.get("https://localhost:8000/api/v1/user/logout", {
+        withCredentials: true,
+      });
+      if (res.data.success) {
+        dispatch(setAuthUser(null));
+        toast.success(res.data.message);
+      }
+    } catch (error) {
+      toast.error(error.response.data.message);
+    }
+  };
   return (
     <nav className="bg-white shadow-lg">
       <div className="mx-auto flex flex-wrap items-center justify-between p-3">
@@ -90,20 +108,38 @@ const Navbar = () => {
           </ul>
 
           {/* Action Buttons */}
-          <div className="flex items-center justify-center space-x-2 lg:mt-0 lg:flex-row flex-col">
-            <Link
-              to="/signup"
-              className="bg-[#105369] text-white px-4 py-2 rounded hover:bg-blue-700 transition"
-            >
-              Join Us
-            </Link>
-            <Link
-              to="/login"
-              className="bg-[#105369] text-white px-4 py-2 rounded hover:bg-blue-700 transition"
-            >
-              Log In
-            </Link>
-          </div>
+          {!user ? (
+            <div className="flex items-center justify-center space-x-2 lg:mt-0 lg:flex-row flex-col">
+              <Link
+                to="/signup"
+                className="bg-[#105369] text-white px-4 py-2 rounded hover:bg-blue-700 transition"
+              >
+                Join Us
+              </Link>
+              <Link
+                to="/login"
+                className="bg-[#105369] text-white px-4 py-2 rounded hover:bg-blue-700 transition"
+              >
+                Log In
+              </Link>
+            </div>
+          ) : (
+            <div className="flex items-center justify-center space-x-2 lg:mt-0 lg:flex-row flex-col">
+              <Link
+                to="/profile"
+                className="bg-[#105369] text-white px-4 py-2 rounded hover:bg-blue-700 transition"
+              >
+                tajbid
+              </Link>
+              <Link
+                to="/"
+                onClick={logoutHandler}
+                className="bg-[#105369] text-white px-4 py-2 rounded hover:bg-blue-700 transition"
+              >
+                Log Out
+              </Link>
+            </div>
+          )}
         </div>
       </div>
     </nav>
