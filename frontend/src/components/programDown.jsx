@@ -1,6 +1,8 @@
 import "bootstrap/dist/css/bootstrap.min.css";
+import { useNavigate } from "react-router-dom";
 
 const Program2 = () => {
+  const navigate = useNavigate();
   return (
     <div className="container my-5 p-10 ">
       <div className="row align-items-stretch">
@@ -20,9 +22,10 @@ const Program2 = () => {
         {/* Left Part (Banner Image) */}
         <div className="col-lg-7 d-flex flex-column">
           <img
+            onClick={() => navigate("/viewevent")}
             src="src/assets/images/upcoming.jpg"
             alt="Recent Event Banner"
-            className="img-fluid w-100 rounded shadow-sm mb-3 h-100"
+            className="img-fluid w-100 rounded shadow-sm mb-3 h-100 cursor-pointer"
           />
         </div>
       </div>
