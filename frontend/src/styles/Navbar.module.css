@@ -1,0 +1,47 @@
+/* Base Navbar Styles */
+.navbar {
+  background-color: white;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  width: 48px;
+  margin-right: 8px;
+}
+
+.clubName {
+  font-size: 1.25rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.tagline {
+  font-size: 0.875rem;
+  color: gray;
+}
+
+/* Responsive Text Change */
+@media screen and (max-width: 395px) {
+  .clubName {
+    font-size: 1.5rem;
+    display: none; /* Hide existing text */
+  }
+
+  .clubName::after {
+    content: "KUCC"; /* Forces "KUCC" to appear */
+    display: block; /* Ensure that "KUCC" appears */
+  }
+
+  .tagline {
+    display: none; /* Hide the tagline text */
+  }
+}
