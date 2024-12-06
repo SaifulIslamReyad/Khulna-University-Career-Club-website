@@ -13,6 +13,16 @@ export const register = async (req, res) => {
       mobile,
       hometown,
     } = req.body;
+    const cvFile = req.file; // Access uploaded file information
+    if (!cvFile) {
+      return res.status(400).json({
+        message: "CV is required",
+        success: false,
+      });
+    }
+
+    // Save CV file path in the database (if applicable)
+    const cvPath = cvFile ? cvFile.path : "";
     if (
       !name ||
       !email ||
@@ -52,6 +62,7 @@ export const register = async (req, res) => {
       discipline,
       mobile,
       hometown,
+      cv: cvPath,
     });
     return res.status(201).json({
       message: "Successfully registered",
