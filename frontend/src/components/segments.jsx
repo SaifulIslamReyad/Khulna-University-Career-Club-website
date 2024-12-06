@@ -2,7 +2,7 @@ import React from "react";
 
 const Segments = () => {
   return (
-    <div className="container mx-auto px-4 py-8  bg-gradient-to-r from-blue-900 via-white-500 to-blue-100 p-5 rounded-lg shadow-lg">
+    <div className="container mx-auto px-4 py-8  bg-gradient-to-br from-blue-900 via-white-500 to-blue-100 p-5 rounded-lg shadow-lg">
       <h1 className="text-4xl font-bold text-center mb-8">Segments</h1>
       <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
         {/* Segment 1: Language */}
