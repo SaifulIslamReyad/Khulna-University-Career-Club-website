@@ -40,19 +40,19 @@ const Program = () => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            Find on Facebook
+            Facebook_Link
           </a>
           <a
             href="#"
             className="btn btn-secondary me-3 text-sm md:text-base lg:text-lg"
           >
-            View Details
+            Details
           </a>
           <a
             href="#"
             className="btn btn-success me-3 text-sm md:text-base lg:text-lg"
           >
-            Register for This Event
+            Register
           </a>
         </div>
         

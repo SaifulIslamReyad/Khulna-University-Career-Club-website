@@ -37,26 +37,21 @@ const Program2 = () => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Find on Facebook
+          Facebook_link
         </a>
         <a
           href="gallery.html"
           className="btn btn-secondary me-3 text-sm md:text-base lg:text-lg"
         >
-          View Event Gallery
+          Event_Gallery
         </a>
         <a
           href="#"
           className="btn btn-success me-3 text-sm md:text-base lg:text-lg"
         >
-          View Details
+          Details
         </a>
-        <a
-          href="#"
-          className="btn btn-info me-3 text-sm md:text-base lg:text-lg"
-        >
-          View More Events
-        </a>
+        
       </div>
       
     </div>
