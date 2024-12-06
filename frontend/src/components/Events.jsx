@@ -2,11 +2,11 @@ import Program2 from "./programDown";
 import Program from "./programUp";
 import Im from "./im";
 import Calendar from "./calender";
-const Event = () => {
+const Events = () => {
   return (
     <>
-      <Im/>
-      <Calendar/>
+      <Im />
+      <Calendar />
       <Program />
       <h1 className="text-center mb-5 text-xl font-bold text-white-800 tracking-wide md:text-3xl lg:text-4xl">
         RECENT EVENTS
@@ -18,4 +18,4 @@ const Event = () => {
     </>
   );
 };
-export default Event;
+export default Events;

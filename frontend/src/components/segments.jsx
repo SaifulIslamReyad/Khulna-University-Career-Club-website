@@ -1,5 +1,3 @@
-import React from "react";
-
 const Segments = () => {
   return (
     <div className="container mx-auto px-4 py-8  bg-gradient-to-r from-blue-900 via-white-500 to-blue-100 p-5 rounded-lg shadow-lg">

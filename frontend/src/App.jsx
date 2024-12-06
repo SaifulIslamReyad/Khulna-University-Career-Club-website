@@ -11,6 +11,7 @@ import MainLayout from "./components/MainLayout";
 import Home from "./components/Home";
 import MemberInfo from "./components/MemberInfo";
 import ViewEvent from "./components/ViewEvent";
+import Events from "./components/Events";
 
 const browerRouter = createBrowserRouter([
   {
@@ -20,6 +21,10 @@ const browerRouter = createBrowserRouter([
       {
         path: "/",
         element: <Home />,
+      },
+      {
+        path: "/events",
+        element: <Events />,
       },
       {
         path: "/blog",

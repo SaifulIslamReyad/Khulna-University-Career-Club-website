@@ -32,35 +32,34 @@ const RecentEvents = () => {
       </div>
 
       {/* Buttons Section */}
-<div className="d-flex justify-content-center mt-3 flex-wrap">
-  <a
-    href="https://www.facebook.com"
-    className="btn btn-primary me-3 mb-2 text-sm md:text-base lg:text-lg"
-    target="_blank"
-    rel="noopener noreferrer"
-  >
-    Facebook_Link
-  </a>
-  <a
-    href="gallery.html"
-    className="btn btn-secondary me-3 mb-2 text-sm md:text-base lg:text-lg"
-  >
-    Event_Gallery
-  </a>
-  <a
-    href="#"
-    className="btn btn-success me-3 mb-2 text-sm md:text-base lg:text-lg"
-  >
-    Details
-  </a>
-  <a
-    href="#"
-    className="btn btn-info me-3 mb-2 text-sm md:text-base lg:text-lg"
-  >
-    More_Events
-  </a>
-</div>
-
+      <div className="d-flex justify-content-center mt-3 flex-wrap">
+        <a
+          href="https://www.facebook.com"
+          className="btn btn-primary me-3 mb-2 text-sm md:text-base lg:text-lg"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Facebook_Link
+        </a>
+        <a
+          href="gallery.html"
+          className="btn btn-secondary me-3 mb-2 text-sm md:text-base lg:text-lg"
+        >
+          Event_Gallery
+        </a>
+        <a
+          href="#"
+          className="btn btn-success me-3 mb-2 text-sm md:text-base lg:text-lg"
+        >
+          Details
+        </a>
+        <a
+          href="#"
+          className="btn btn-info me-3 mb-2 text-sm md:text-base lg:text-lg"
+        >
+          More_Events
+        </a>
+      </div>
     </div>
   );
 };

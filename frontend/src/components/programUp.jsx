@@ -55,7 +55,6 @@ const Program = () => {
             Register for This Event
           </a>
         </div>
-        
       </div>
     </div>
   );

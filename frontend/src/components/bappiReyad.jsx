@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import coverImage from "../assets/images/coverPhoto_home.jpg";
-import styles from "../styles/TextAnimation.module.css"; 
+import styles from "../styles/TextAnimation.module.css";
 
 const BappiReyad = () => {
   const texts = [
@@ -16,15 +16,15 @@ const BappiReyad = () => {
   ];
 
   const [currentTextIndex, setCurrentTextIndex] = useState(0);
-  const [animationKey, setAnimationKey] = useState(0); 
+  const [animationKey, setAnimationKey] = useState(0);
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setAnimationKey((prevKey) => prevKey + 1); 
+      setAnimationKey((prevKey) => prevKey + 1);
       setCurrentTextIndex((prevIndex) => (prevIndex + 1) % texts.length);
     }, 4000);
 
-    return () => clearInterval(interval); 
+    return () => clearInterval(interval);
   }, [texts.length]);
 
   return (
@@ -42,7 +42,6 @@ const BappiReyad = () => {
         KHULNA UNIVERSITY CAREER CLUB
       </div>
 
-     
       <div
         className={`${styles.textContainer} ${styles.textAppear}`}
         key={animationKey}

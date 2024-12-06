@@ -3,8 +3,6 @@ import "bootstrap/dist/css/bootstrap.min.css";
 const Program2 = () => {
   return (
     <div className="container my-5 p-10 ">
-      
-
       <div className="row align-items-stretch">
         {/* Right Part (YouTube Video) */}
         <div className="col-lg-5 mb-4 d-flex">
@@ -58,9 +56,7 @@ const Program2 = () => {
           View More Events
         </a>
       </div>
-      
     </div>
-    
   );
 };
 
