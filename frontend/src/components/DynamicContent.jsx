@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import coverImage from "../assets/images/coverPhoto_home.jpg";
 import styles from "../styles/TextAnimation.module.css";
 
-const BappiReyad = () => {
+const DynamicContent = () => {
   const texts = [
     "Over 300 members and 90 speakers are in this family",
     "Access career resources and workshops for future growth",
@@ -52,4 +52,4 @@ const BappiReyad = () => {
   );
 };
 
-export default BappiReyad;
+export default DynamicContent;

@@ -1,3 +1,4 @@
+import { Card, CardContent, CardFooter, CardTitle } from "@/components/ui/card";
 import { useState } from "react";
 import { IoIosCloseCircle } from "react-icons/io";
 
@@ -58,28 +59,34 @@ const GallerySection = () => {
 
       {/* Modal for Viewing Image */}
       {selectedImage && (
-        <div className="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50">
-          <div className="relative">
-            <img
-              src={selectedImage}
-              alt="Full View"
-              className="max-w-full max-h-screen"
-            />
-            <button
-              onClick={handleCloseModal}
-              className="absolute top-0 right-0 text-center w-10 h-10 text-white rounded shadow"
-            >
-              <IoIosCloseCircle size={32} />
-            </button>
-            <a
-              href={selectedImage}
-              download={`${selectedImage}.jpg`}
-              className="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-full mt-10 px-4 py-2 text-center bg-green-500 text-white rounded shadow hover:bg-green-600"
-            >
-              Download
-            </a>
+        <Card>
+          <div className="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50">
+            <div className="relative">
+              <CardTitle>
+                <button onClick={handleCloseModal}>
+                  <IoIosCloseCircle size={32} />
+                </button>
+              </CardTitle>
+              <CardContent>
+                <img
+                  src={selectedImage}
+                  alt="Full View"
+                  className="max-w-full max-h-screen"
+                />
+              </CardContent>
+
+              <CardFooter>
+                <a
+                  href={selectedImage}
+                  download={`${selectedImage}.jpg`}
+                  className="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-full mt-10 px-4 py-2 text-center bg-green-500 text-white rounded shadow hover:bg-green-600"
+                >
+                  Download
+                </a>
+              </CardFooter>
+            </div>
           </div>
-        </div>
+        </Card>
       )}
     </div>
   );

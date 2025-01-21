@@ -1,11 +1,11 @@
 import { useState } from "react";
-import LoginHeader from "./LoginHeader";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import { toast } from "sonner";
 import { Loader2 } from "lucide-react";
+import LoginHeader from "@/components/LoginHeader";
 
 const Signup = () => {
   const [input, setInput] = useState({

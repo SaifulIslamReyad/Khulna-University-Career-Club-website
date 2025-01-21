@@ -1,7 +1,7 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import { useNavigate } from "react-router-dom";
 
-const Program2 = () => {
+const ProgramDown = () => {
   const navigate = useNavigate();
   return (
     <div className="container my-5 p-10 ">
@@ -63,4 +63,4 @@ const Program2 = () => {
   );
 };
 
-export default Program2;
+export default ProgramDown;

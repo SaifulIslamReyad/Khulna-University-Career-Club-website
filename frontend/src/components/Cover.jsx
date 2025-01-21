@@ -1,6 +1,6 @@
 import coverImage from "../assets/images/event.jpg";
 
-const Im = () => {
+const Cover = () => {
   return (
     <div
       className="relative w-full bg-cover bg-center"
@@ -19,4 +19,4 @@ const Im = () => {
   );
 };
 
-export default Im;
+export default Cover;
