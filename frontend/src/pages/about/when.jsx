@@ -1,5 +1,3 @@
-import React from "react";
-
 const When = () => {
   return (
     <div className="bg-gradient-to-br from-yellow-200 via-white to-orange-200 p-10 rounded-lg shadow-lg my-5">
@@ -7,7 +5,15 @@ const When = () => {
         When Did the Journey Begin?
       </h2>
       <p className="text-lg text-gray-700 leading-relaxed mb-6 md:text-xl md:leading-loose">
-        The <span className="font-semibold text-orange-800">Khulna University Career Club</span> was founded in <span className="font-bold">2024</span> by <span className="font-bold">Saif Bappi</span>, a visionary leader dedicated to fostering career development among students. Since its inception, the club has grown into a vibrant community of learners, achievers, and mentors.
+        The{" "}
+        <span className="font-semibold text-orange-800">
+          Khulna University Career Club
+        </span>{" "}
+        was founded in <span className="font-bold">2024</span> by{" "}
+        <span className="font-bold">Saif Bappi</span>, a visionary leader
+        dedicated to fostering career development among students. Since its
+        inception, the club has grown into a vibrant community of learners,
+        achievers, and mentors.
       </p>
 
       <div className="grid gap-6 md:grid-cols-2">
@@ -17,7 +23,10 @@ const When = () => {
             Founding Story
           </h3>
           <p className="text-gray-700">
-            The club began with a mission to bridge the gap between academic learning and professional skills. Saif Reyad, with a small team of dedicated students, laid the foundation for what would become a cornerstone of career readiness at Khulna University.
+            The club began with a mission to bridge the gap between academic
+            learning and professional skills. Saif Reyad, with a small team of
+            dedicated students, laid the foundation for what would become a
+            cornerstone of career readiness at Khulna University.
           </p>
         </div>
 
@@ -29,7 +38,7 @@ const When = () => {
           <ul className="list-disc pl-5 text-gray-700">
             <li>First career fair organized in 2024.</li>
             <li>Collaborations with leading companies for internships.</li>
-            <li>Awarded "Best Student Initiative" in 2024.</li>
+            <li>Awarded Best Student Initiative in 2024.</li>
             <li>Reached a milestone of 1,000 members in 2024.</li>
           </ul>
         </div>
@@ -40,7 +49,9 @@ const When = () => {
             Collaborations & Growth
           </h3>
           <p className="text-gray-700">
-            The club has partnered with top organizations and professionals to provide workshops, networking opportunities, and job resources. These collaborations have expanded the club's reach and impact.
+            The club has partnered with top organizations and professionals to
+            provide workshops, networking opportunities, and job resources.
+            These collaborations have expanded the club&apos;s reach and impact.
           </p>
         </div>
 
@@ -50,7 +61,9 @@ const When = () => {
             Achievements
           </h3>
           <p className="text-gray-700">
-            From hosting annual career expos to securing scholarships and job placements for members, the club continues to achieve remarkable milestones that inspire the next generation.
+            From hosting annual career expos to securing scholarships and job
+            placements for members, the club continues to achieve remarkable
+            milestones that inspire the next generation.
           </p>
         </div>
       </div>
@@ -58,7 +71,9 @@ const When = () => {
       {/* Footer Section */}
       <div className="mt-8 text-center">
         <p className="text-lg text-gray-700 mb-4">
-          Our journey is a testament to the power of determination and collaboration. Join us as we continue to shape the future of Khulna University's brightest minds!
+          Our journey is a testament to the power of determination and
+          collaboration. Join us as we continue to shape the future of Khulna
+          University&apos;s brightest minds!
         </p>
         <a
           href="#"

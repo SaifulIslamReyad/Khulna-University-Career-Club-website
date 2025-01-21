@@ -1,4 +1,5 @@
 import "bootstrap/dist/css/bootstrap.min.css";
+import { Link } from "react-router-dom";
 
 const RecentEvents = () => {
   return (
@@ -23,11 +24,13 @@ const RecentEvents = () => {
 
         {/* Left Part (Banner Image) */}
         <div className="col-lg-7 d-flex flex-column">
-          <img
-            src="src/assets/images/upcoming.jpg"
-            alt="Recent Event Banner"
-            className="img-fluid w-100 rounded shadow-sm mb-3 h-100"
-          />
+          <Link to="/events" className="text-decoration-none">
+            <img
+              src="src/assets/images/upcoming.jpg"
+              alt="Event Banner"
+              className="img-fluid w-100 rounded shadow-sm mb-3"
+            />
+          </Link>
         </div>
       </div>
 

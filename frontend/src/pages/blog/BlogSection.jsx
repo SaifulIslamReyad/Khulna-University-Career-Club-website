@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 
 const BlogSection = () => {
   return (
@@ -6,7 +7,7 @@ const BlogSection = () => {
       <section className="w-full flex items-center justify-center flex-col relative">
         {/* Section article and heading starts*/}
         <section className="flex flex-col items-center justify-center gap-5 md:gap-10 pt-10 md:pt-20 text-center px-20">
-          <article className="text-lg md:text-3xl text-white">
+          <article className="text-xl md:text-3xl text-white">
             Our club thrives thanks to the dedication of its members. Meet the
             team behind the events, initiatives, and programs that shape the
             future of Khulna University students.
@@ -21,7 +22,9 @@ const BlogSection = () => {
               </span>
             </div>
             <div className="relative sm:absolute pt-3 sm:pt-0 right-0 bottom-3 ">
-              <Button>Post Your Blog</Button>
+              <Button>
+                <Link to="/blog/create">Post Your Blog</Link>
+              </Button>
             </div>
           </div>
         </section>

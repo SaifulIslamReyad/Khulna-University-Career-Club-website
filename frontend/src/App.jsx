@@ -12,6 +12,8 @@ import ViewEvent from "./pages/event/ViewEvent";
 import BlogSection from "./pages/blog/BlogSection";
 import Login from "./pages/login&signup/Login";
 import Signup from "./pages/login&signup/Signup";
+import About from "./pages/about/About";
+import CreateBlog from "./pages/blog/CreateBlog";
 
 const browerRouter = createBrowserRouter([
   {
@@ -23,12 +25,20 @@ const browerRouter = createBrowserRouter([
         element: <Home />,
       },
       {
+        path: "/about",
+        element: <About />,
+      },
+      {
         path: "/events",
         element: <Events />,
       },
       {
         path: "/blog",
         element: <BlogSection />,
+      },
+      {
+        path: "/blog/create",
+        element: <CreateBlog />,
       },
       {
         path: "/members",

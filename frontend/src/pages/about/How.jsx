@@ -1,5 +1,3 @@
-import React from "react";
-
 const How = () => {
   return (
     <div className="bg-gradient-to-br from-green-200 via-white to-teal-200 p-10 rounded-lg shadow-lg my-5">
@@ -7,7 +5,13 @@ const How = () => {
         How Does the Career Club Work?
       </h2>
       <p className="text-lg text-gray-700 leading-relaxed mb-6 md:text-xl md:leading-loose">
-        The <span className="font-semibold text-teal-800">Khulna University Career Club</span> operates as a vibrant platform that empowers students through structured activities, programs, and resources tailored to boost their career readiness.
+        The{" "}
+        <span className="font-semibold text-teal-800">
+          Khulna University Career Club
+        </span>{" "}
+        operates as a vibrant platform that empowers students through structured
+        activities, programs, and resources tailored to boost their career
+        readiness.
       </p>
 
       <div className="grid gap-6 md:grid-cols-2">
@@ -17,7 +21,9 @@ const How = () => {
             Events & Seminars
           </h3>
           <p className="text-gray-700">
-            Regular events and seminars featuring industry leaders, alumni, and career experts. These sessions provide insights into various industries, career paths, and skill-building opportunities.
+            Regular events and seminars featuring industry leaders, alumni, and
+            career experts. These sessions provide insights into various
+            industries, career paths, and skill-building opportunities.
           </p>
         </div>
 
@@ -27,7 +33,9 @@ const How = () => {
             Mentorship Programs
           </h3>
           <p className="text-gray-700">
-            Personalized guidance from experienced mentors who help students navigate their career journey, explore new possibilities, and overcome challenges.
+            Personalized guidance from experienced mentors who help students
+            navigate their career journey, explore new possibilities, and
+            overcome challenges.
           </p>
         </div>
 
@@ -37,7 +45,9 @@ const How = () => {
             Skill-Building Workshops
           </h3>
           <p className="text-gray-700">
-            Hands-on workshops focusing on resume writing, interview preparation, communication skills, and more to prepare students for the job market.
+            Hands-on workshops focusing on resume writing, interview
+            preparation, communication skills, and more to prepare students for
+            the job market.
           </p>
         </div>
 
@@ -47,7 +57,8 @@ const How = () => {
             Other Initiatives
           </h3>
           <p className="text-gray-700">
-            Career fairs, internship placements, and exclusive access to job portals to connect students with employment opportunities.
+            Career fairs, internship placements, and exclusive access to job
+            portals to connect students with employment opportunities.
           </p>
         </div>
       </div>
@@ -55,7 +66,8 @@ const How = () => {
       {/* Call-to-Action */}
       <div className="mt-8 text-center">
         <p className="text-lg text-gray-700 mb-4">
-          Join us and take the first step toward a brighter future. Explore the resources and programs designed just for you!
+          Join us and take the first step toward a brighter future. Explore the
+          resources and programs designed just for you!
         </p>
         <a
           href="#"
