@@ -1,4 +1,6 @@
-import { useState } from "react";
+import { useLogoutUserMutation } from "@/features/api/authApi";
+import { useEffect, useState } from "react";
+import { useSelector } from "react-redux";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 // import { useSelector } from "react-redux";
 
@@ -6,8 +8,18 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const location = useLocation();
   const navigate = useNavigate();
-  const user = false;
-
+  const user = useSelector((state) => state.auth.user);
+  const [logoutUser, { data, isSuccess }] = useLogoutUserMutation();
+  const logoutHandler = async () => {
+    await logoutUser();
+  };
+  useEffect(() => {
+    if (isSuccess) {
+      console.log(data.message);
+      navigate("/");
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [isSuccess]);
   return (
     <>
       {/* Navbar Section */}
@@ -160,14 +172,15 @@ const Navbar = () => {
                   to="/profile"
                   className="bg-[#105369] text-white px-4 py-2 rounded hover:bg-blue-700 transition"
                 >
-                  {user.username}
+                  {user?.name}
                 </Link>
-                <Link
-                  to="/"
+
+                <button
+                  onClick={logoutHandler}
                   className="bg-[#105369] text-white px-4 py-2 rounded hover:bg-blue-700 transition"
                 >
                   Log Out
-                </Link>
+                </button>
               </div>
             )}
           </div>
