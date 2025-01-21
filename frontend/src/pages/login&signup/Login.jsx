@@ -1,23 +1,23 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import { MdEmail } from "react-icons/md";
 import { FaEyeSlash, FaEye } from "react-icons/fa";
 import "bootstrap/dist/css/bootstrap.min.css";
-import LoginHeader from "./LoginHeader";
-import { useState } from "react";
-import axios from "axios";
+import { useEffect, useState } from "react";
 // import { useDispatch, useSelector } from "react-redux";
 // import { setAuthUser } from "@/redux/authSlice";
 import { Loader2 } from "lucide-react";
 import { Link, useNavigate } from "react-router-dom";
-import { toast } from "sonner";
+import LoginHeader from "@/components/LoginHeader";
+import { useLoginUserMutation } from "@/features/api/authApi";
 
 const Login = () => {
   const [input, setInput] = useState({
     email: "",
     password: "",
   });
-  const [loading, setLoading] = useState(false);
   const [showPassword, setShowPassword] = useState(false);
-
+  const [loginUser, { data, error, isLoading, isError }] =
+    useLoginUserMutation();
   const togglePasswordVisibility = (e) => {
     e.preventDefault(); // Prevents button from triggering form submission
     setShowPassword((prevState) => !prevState);
@@ -31,33 +31,21 @@ const Login = () => {
 
   const loginHandler = async (e) => {
     e.preventDefault();
-    setLoading(true);
-    try {
-      const res = await axios.post(
-        "http://localhost:8000/api/v1/user/login",
-        input,
-        {
-          headers: {
-            "Content-Type": "application/json",
-          },
-          withCredentials: true,
-        }
-      );
-      if (res.data.success) {
-        toast.success(res.data.message || "Login Successfully");
-        navigate("/");
-        setInput({
-          email: "",
-          password: "",
-        });
-      }
-    } catch (error) {
-      toast.error(error.response?.data?.message || "Something went wrong");
-      console.error(error);
-    } finally {
-      setLoading(false);
-    }
+    await loginUser(input);
+    setInput({
+      email: "",
+      password: "",
+    });
   };
+  useEffect(() => {
+    if (data) {
+      console.log(data.message);
+      navigate("/");
+    }
+    if (isError) {
+      console.log(error);
+    }
+  }, [data, isError]);
 
   return (
     <>
@@ -134,7 +122,7 @@ const Login = () => {
           {/* Buttons */}
           <div className="flex flex-col gap-3 mb-20">
             <div>
-              {loading ? (
+              {isLoading ? (
                 <button className="btn btn-primary w-full shadow-sm" disabled>
                   <Loader2 className="animate-spin" />
                   Please Wait

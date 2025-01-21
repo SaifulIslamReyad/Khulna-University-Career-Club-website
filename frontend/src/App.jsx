@@ -1,16 +1,17 @@
 import "./App.css";
-import BlogSection from "./components/BlogSection";
-import QnaSection from "./components/QnaSection";
-import Members from "./components/Members";
-import GallerySection from "./components/GallerySection";
-import Signup from "./components/Signup";
-import Login from "./components/Login";
-import Profile from "./components/Profile";
+import QnaSection from "./pages/QNA/QnaSection";
+import Members from "./pages/member/Members";
+import GallerySection from "./pages/gallery/GallerySection";
+import Profile from "./pages/profile/Profile";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import MainLayout from "./components/MainLayout";
 import Home from "./components/Home";
-import MemberInfo from "./components/MemberInfo";
-import ViewEvent from "./components/ViewEvent";
+import MemberInfo from "./pages/member/MemberInfo";
+import Events from "./pages/event/Events";
+import MainLayout from "./layout/MainLayout";
+import ViewEvent from "./pages/event/ViewEvent";
+import BlogSection from "./pages/blog/BlogSection";
+import Login from "./pages/login&signup/Login";
+import Signup from "./pages/login&signup/Signup";
 
 const browerRouter = createBrowserRouter([
   {
@@ -20,6 +21,10 @@ const browerRouter = createBrowserRouter([
       {
         path: "/",
         element: <Home />,
+      },
+      {
+        path: "/events",
+        element: <Events />,
       },
       {
         path: "/blog",

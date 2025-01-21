@@ -1,6 +1,6 @@
 import { User } from "../models/user.model.js";
 import bcrypt from "bcryptjs";
-import jwt from "jsonwebtoken";
+import { generateToken } from "../utils/generateToken.js";
 export const register = async (req, res) => {
   try {
     const {
@@ -13,6 +13,16 @@ export const register = async (req, res) => {
       mobile,
       hometown,
     } = req.body;
+    const cvFile = req.file; // Access uploaded file information
+    if (!cvFile) {
+      return res.status(400).json({
+        message: "CV is required",
+        success: false,
+      });
+    }
+
+    // Save CV file path in the database (if applicable)
+    const cvPath = cvFile ? cvFile.path : "";
     if (
       !name ||
       !email ||
@@ -52,6 +62,7 @@ export const register = async (req, res) => {
       discipline,
       mobile,
       hometown,
+      cv: cvPath,
     });
     return res.status(201).json({
       message: "Successfully registered",
@@ -89,37 +100,7 @@ export const login = async (req, res) => {
         success: false,
       });
     }
-    const token = jwt.sign({ userID: user._id }, process.env.SECRET_KEY, {
-      expiresIn: "1d",
-    });
-    const userResponse = {
-      _id: user._id,
-      name: user.name,
-      email: user.email,
-      studentID: user.studentID,
-      profilePicture: user.profilePicture,
-      discipline: user.discipline,
-      mobile: user.mobile,
-      hometown: user.hometown,
-      gender: user.gender,
-      cv: user.cv,
-      skills: user.skills,
-      expectation: user.expectation,
-      hire: user.hire,
-      posts: user.posts,
-    };
-    return res
-      .cookie("token", token, {
-        httpOnly: true,
-        sameSite: "strict",
-        maxAge: 24 * 60 * 60 * 1000,
-        secure: process.env.NODE_ENV === "production",
-      })
-      .json({
-        message: `Welcome ${user.name}`,
-        success: true,
-        user: userResponse,
-      });
+    generateToken(res, user, `Welcome ${user.name}`);
   } catch (error) {
     console.error("Log in error", error);
     return res.status(500).json({
@@ -131,14 +112,14 @@ export const login = async (req, res) => {
 
 export const logout = async (_, res) => {
   try {
-    return res.cookie("token", "", { maxAge: 0 }).json({
-      message: "Logout successfully",
+    return res.status(200).cookie("token", null, { maxAge: 0 }).json({
+      message: "Logged out successfully",
       success: true,
     });
   } catch (error) {
-    console.error("Log out error:", error);
+    console.log(error);
     return res.status(500).json({
-      message: "An error occurred during logout",
+      message: "Failed to logout",
       success: false,
     });
   }

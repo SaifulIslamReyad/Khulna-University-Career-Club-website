@@ -2,9 +2,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 
 const UpcomingEvents = () => {
   return (
-    <div
-      className="container-fluid my-0 bg-gradient-to-r from-blue-900 via-white-500 to-blue-100 p-5 rounded-lg shadow-lg"
-    >
+    <div className="container-fluid my-0 bg-gradient-to-r from-blue-900 via-white-500 to-blue-100 p-5 rounded-lg shadow-lg">
       <h1 className="text-center mb-4 text-xl font-bold text-white-800 tracking-wide md:text-3xl lg:text-4xl">
         UPCOMING EVENTS
       </h1>

@@ -1,4 +1,4 @@
-import AccordionSection from "./AccordionSection";
+import AccordionSection from "@/components/AccordionSection";
 import { FaWhatsappSquare } from "react-icons/fa";
 const QnaSection = () => {
   return (

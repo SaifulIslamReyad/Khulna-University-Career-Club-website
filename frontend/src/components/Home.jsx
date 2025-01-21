@@ -1,15 +1,16 @@
-import UpcomingEvents from "./upcomingEvents.jsx";
-import RecentEvents from "./recentEvents.jsx";
-import Segments from "./segments.jsx";
-import BappiReyad from "./bappiReyad.jsx";
-
+import UpcomingEvents from "../pages/event/upcomingEvents.jsx";
+import RecentEvents from "../pages/event/recentEvents.jsx";
+import Segments from "./Segments.jsx";
+import DynamicContent from "./DynamicContent.jsx";
 
 const Home = () => {
-  return <>
-<BappiReyad/>
-<UpcomingEvents/>
-<RecentEvents/>
-<Segments/>
-  </>;
+  return (
+    <>
+      <DynamicContent />
+      <UpcomingEvents />
+      <RecentEvents />
+      <Segments />
+    </>
+  );
 };
 export default Home;
