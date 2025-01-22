@@ -1,4 +1,5 @@
 import "bootstrap/dist/css/bootstrap.min.css";
+import { Link } from "react-router-dom";
 
 const UpcomingEvents = () => {
   return (
@@ -11,11 +12,13 @@ const UpcomingEvents = () => {
         <div className="row align-items-stretch">
           {/* Left Part (Banner Image) */}
           <div className="col-lg-7 mb-4 d-flex flex-column">
-            <img
-              src="src/assets/images/upcoming.jpg"
-              alt="Event Banner"
-              className="img-fluid w-100 rounded shadow-sm mb-3"
-            />
+            <Link to="/events" className="text-decoration-none">
+              <img
+                src="src/assets/images/upcoming.jpg"
+                alt="Event Banner"
+                className="img-fluid w-100 rounded shadow-sm mb-3"
+              />
+            </Link>
           </div>
 
           {/* Right Part (YouTube Video) */}
